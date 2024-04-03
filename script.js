@@ -35,6 +35,7 @@ boxes.forEach((box) => {
             turnO = true;
         }
         box.disabled = true;
+        box.setAttribute("style","background-color : #88ed9a")
         cnt++;
 
         let isWinner = checkWinner();
