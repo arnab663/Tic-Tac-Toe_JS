@@ -72,8 +72,11 @@ const checkWinner = () => {
         let pos3 = boxes[c].innerText;
         if (pos1) {
             if (pos1 === pos2 && pos2 === pos3) {
-            showWinner(pos1);
-            return true;
+                boxes[a].classList.add('green');
+                boxes[b].classList.add('green');
+                boxes[c].classList.add('green');
+                showWinner(pos1);
+                return true;
             }
         }
     }
