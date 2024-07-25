@@ -54,6 +54,7 @@ const disableBoxes = () => {
 const enableBoxes = () => {
     for (let box of boxes) {
         box.disabled = false;
+        box.removeAttribute("style","background-color : #88ed9a")
         box.innerText = "";
     }
 };
@@ -72,9 +73,9 @@ const checkWinner = () => {
         let pos3 = boxes[c].innerText;
         if (pos1) {
             if (pos1 === pos2 && pos2 === pos3) {
-                boxes[a].classList.add('green');
-                boxes[b].classList.add('green');
-                boxes[c].classList.add('green');
+                boxes[a].setAttribute('style','color : green; background-color : #88ed9a')
+                boxes[b].setAttribute('style','color : green; background-color : #88ed9a')
+                boxes[c].setAttribute('style','color : green; background-color : #88ed9a')
                 showWinner(pos1);
                 return true;
             }
